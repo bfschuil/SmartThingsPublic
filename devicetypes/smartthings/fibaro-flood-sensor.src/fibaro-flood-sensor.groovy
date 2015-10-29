@@ -319,7 +319,7 @@ def configure() {
     cmds << zwave.configurationV1.configurationGet(parameterNumber: 12).format()
 
 	// reporting frequency of temps and battery set to one hour
-	cmds << zwave.configurationV1.configurationSet(configurationValue: [0,60*60], parameterNumber: 10, size: 2).format()
+	cmds << zwave.configurationV1.configurationSet(configurationValue: [14,16], parameterNumber: 10, size: 2).format()
     cmds << zwave.configurationV1.configurationGet(parameterNumber: 10).format()
     
     cmds << zwave.wakeUpV1.wakeUpNoMoreInformation().format()
